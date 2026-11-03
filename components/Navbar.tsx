@@ -10,6 +10,9 @@ export default function Navbar() {
       <Link href="/event" className="text-slate-600 hover:text-blue-600">
         Event
       </Link>
+      <Link href="/favorit" className="text-slate-600 hover:text-blue-600">
+        Favorit
+      </Link>
       <Link href="/tentang" className="text-slate-600 hover:text-blue-600">
         Tentang
       </Link>

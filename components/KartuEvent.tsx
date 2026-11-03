@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { rupiah, type Event } from "@/data/events";
+import TombolFavorit from "./TombolFavorit";
 
 export default function KartuEvent({ event }: { event: Event }) {
   const sisa = Math.max(event.kuota - event.terisi, 0);
@@ -14,7 +15,11 @@ export default function KartuEvent({ event }: { event: Event }) {
         {event.tanggal} · {event.lokasi}
       </p>
       <p className="mt-2 font-medium">{rupiah(event.harga)}</p>
-      <p className={sisa === 0 ? "text-sm text-red-600" : "text-sm text-green-700"}>
+      <p
+        className={
+          sisa === 0 ? "text-sm text-red-600" : "text-sm text-green-700"
+        }
+      >
         {sisa === 0 ? "Tiket habis" : `Sisa ${sisa} tiket`}
       </p>
       <Link
